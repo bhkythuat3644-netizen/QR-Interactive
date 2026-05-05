@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 9998;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* ===== PANEL ===== */
+.login-box {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+/* ===== SCALE MODE ===== */
+.login-box.zoom {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+/* ===== ZOOM BUTTON ===== */
+.zoom-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 2;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== INPUT ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.input-group.active {
+  outline: 2px solid red;
+}
+
+/* icon */
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* input */
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 34px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* button */
+.button {
+  width: 100%;
+  padding: 14px;
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+/* ===== STEP ===== */
+.step {
+  position: absolute;
+  right: -14px;
+  top: -6px;
+  width: 22px;
+  height: 22px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ===== DESC ===== */
+.desc {
+  margin-top: 10px;
+  font-size: 13px;
+  color: red;
+  min-height: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay" id="overlay" onclick="UI.fullscreen.exit('#panel')"></div>
+
+<div class="login-box" id="panel">
+
+  <div class="zoom-btn" onclick="UI.fullscreen.toggle('#panel')">⛶</div>
+
+  <div class="title">ĐĂNG NHẬP</div>
+
+  <div class="input-group" data-step="1">
+    <div class="step">1</div>
+    <span class="icon">💳</span>
+    <input placeholder="Mã số thẻ">
+  </div>
+
+  <div class="input-group" data-step="2">
+    <div class="step">2</div>
+    <span class="icon">🔑</span>
+    <input type="password" placeholder="Mật khẩu">
+  </div>
+
+  <div class="input-group" data-step="3">
+    <div class="step">3</div>
+    <button class="button">Xác nhận</button>
+  </div>
+
+  <div class="desc" id="desc"></div>
+
+</div>
+
+<script>
+const UI = {
+
+  /* =========================
+     FULLSCREEN MODULE (SCALE DYNAMIC)
+  ========================= */
+  fullscreen: {
+
+    toggle(selector){
+      const el = document.querySelector(selector);
+      const overlay = document.getElementById("overlay");
+
+      if(el.classList.contains("zoom")){
+        this.exit(selector);
+        return;
+      }
+
+      // ===== TÍNH SCALE THEO VIEWPORT =====
+      const rect = el.getBoundingClientRect();
+
+      const scaleX = window.innerWidth / rect.width;
+      const scaleY = window.innerHeight / rect.height;
+
+      const scale = Math.min(scaleX, scaleY) * 0.95; 
+      // 0.95 = chừa viền đẹp
+
+      el.style.setProperty("--scale", scale);
+
+      el.classList.add("zoom");
+      overlay.classList.add("show");
+    },
+
+    exit(selector){
+      const el = document.querySelector(selector);
+      const overlay = document.getElementById("overlay");
+
+      el.classList.remove("zoom");
+      el.style.removeProperty("--scale");
+      overlay.classList.remove("show");
+    }
+  },
+
+  /* =========================
+     GUIDE MODULE (REUSABLE)
+  ========================= */
+  guide: {
+
+    data: {
+      1: "Bước 1: Nhập mã số thẻ",
+      2: "Bước 2: Nhập mật khẩu",
+      3: "Bước 3: Nhấn đăng nhập"
+    },
+
+    init(container){
+
+      const root = document.querySelector(container);
+
+      if(!root) return;
+
+      root.querySelectorAll("[data-step]").forEach(el => {
+
+        const step = el.getAttribute("data-step");
+
+        const btn = el.querySelector(".step");
+
+        if(btn){
+          btn.onclick = (e) => {
+            e.stopPropagation();
+            this.show(container, step);
+          };
+        }
+
+      });
+
+    },
+
+    show(container, step){
+
+      const root = document.querySelector(container);
+      if(!root) return;
+
+      // remove old highlight
+      root.querySelectorAll(".input-group")
+        .forEach(el => el.classList.remove("active"));
+
+      // add highlight
+      const target = root.querySelector(`[data-step="${step}"]`);
+      if(target){
+        target.classList.add("active");
+      }
+
+      // update description
+      const desc = root.querySelector("#desc");
+      if(desc){
+        desc.innerText = this.data[step] || "";
+      }
+    }
+  }
+};
+
+/* =========================
+   INIT
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  UI.guide.init("#panel");
+});
+</script>
+
+</body>
+</html>
