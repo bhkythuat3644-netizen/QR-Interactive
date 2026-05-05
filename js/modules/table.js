@@ -28,6 +28,10 @@ export function renderTable(xuong = "", role = "") {
         if (d.bv_spk) roles.push("BV-SPK");
         if (d.bv_dg) roles.push("BV-DG");
 
+        const roleHTML = roles.map(r => 
+            `<span class="badge">${r}</span>`
+        ).join("");
+
         const row = `
         <tr>
             <td>${d.id}</td>
@@ -35,7 +39,7 @@ export function renderTable(xuong = "", role = "") {
             <td>${d.mat_khau}</td>
             <td>${d.bp}</td>
             <td>${d.xuong}</td>
-            <td>${roles.join(", ")}</td>
+            <td><div class="role-cell">${roleHTML}</div></td>
         </tr>
         `;
 
