@@ -15,5 +15,13 @@
 .detail-grid { display: grid; grid-template-columns: 1fr 2.5fr; gap: 50px; align-items: center; }
 
 @media (max-width: 768px) {
-  .detail-grid { grid-template-columns: 1fr; }
+  .detail-grid { 
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+  }
+  .slide { 
+      padding: 60px 5% 20px; 
+      justify-content: flex-start; 
+      overflow-y: auto; 
+  }
 }
