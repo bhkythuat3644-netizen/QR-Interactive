@@ -4,7 +4,7 @@ export const users = [
 {id:"004772", ten:"NGUYỄN THỊ LIÊN", mat_khau:"0000", bp:"Thu mua", xuong:"VPC", ai:1, pkl:1, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004782", ten:"LÊ NGỌC BẢO TRÂM", mat_khau:"0000", bp:"Thu mua", xuong:"VPC", ai:0, pkl:1, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004764", ten:"CÔNG GIA PHỤNG", mat_khau:"0000", bp:"Thu mua", xuong:"VPC", ai:1, pkl:0, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
-{id:"004391", ten:"NGUYỄN THỊ THANH TÂM", mat_khau:"0000", bp:"Kế toán", xuong:"VPC", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
+{id:"004391", ten:"NGUYỄN THỊ THANH TÂM", mat_khau:"0000", bp:"Kế toán", xuong:"VPC", ai:0, pkl:1, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"003930", ten:"ĐỖ VĂN TÍNH", mat_khau:"0000", bp:"XNK", xuong:"VPC", ai:1, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
 {id:"003894", ten:"NGUYỄN THỊ LAN VIÊN", mat_khau:"0000", bp:"XNK", xuong:"VPC", ai:1, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004798", ten:"THẠCH LAI", mat_khau:"0000", bp:"GC2 Giường", xuong:"BH", ai:0, pkl:0, bk_bed:1, bk_tu:0, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:0, bv_spk:1, bv_dg:0},
