@@ -1,4 +1,6 @@
 export const users = [
+{id:"003232", ten:"Lê Thị Minh Trang", mat_khau:"0000", bp:"Nghiệp vụ", xuong:"VPC", ai:1, pkl:1, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
+{id:"003929", ten:"Võ Thị Bích Vân", mat_khau:"0000", bp:"Nghiệp vụ", xuong:"VPC", ai:1, pkl:1, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
 {id:"004772", ten:"NGUYỄN THỊ KIM LIÊN", mat_khau:"0000", bp:"THU MUA", xuong:"VPC", ai:1, pkl:1, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004782", ten:"LÊ NGỌC BẢO TRÂM", mat_khau:"0000", bp:"THU MUA", xuong:"VPC", ai:0, pkl:1, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004764", ten:"CÔNG GIA PHỤNG", mat_khau:"0000", bp:"THU MUA", xuong:"VPC", ai:1, pkl:0, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
