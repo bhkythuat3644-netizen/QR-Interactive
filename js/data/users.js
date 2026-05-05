@@ -24,7 +24,7 @@ export const users = [
 
 {id:"000029", ten:"NGUYỄN THỊ PHƯỢNG", mat_khau:"0000", bp:"KHO", xuong:"BH", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:0, bv_dg:0},
 {id:"000014", ten:"NGUYỄN HỮU CU", mat_khau:"0000", bp:"TTHK", xuong:"BH", ai:0, pkl:0, bk_bed:0, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:1, bv_spk:0, bv_dg:0},
-{id:"004802", ten:"NGUYỄN HỮU TỨ", mat_khau:"0000", bp:"GC1 TỦ", xuong:"BH", ai:0, pkl:0, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
+{id:"004802", ten:"NGUYỄN HỮU TỨ", mat_khau:"0000", bp:"GC1 TỦ", xuong:"BH", ai:0, pkl:0, bk_bed:0, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:0, bv_tu:1, bv_spk:0, bv_dg:0},
 
 {id:"004186", ten:"PHẠM XUÂN THƯỜNG", mat_khau:"0000", bp:"VPX", xuong:"BH", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:0, bv_dg:0},
 {id:"004801", ten:"NGUYỄN TÂM ANH", mat_khau:"0000", bp:"VPX", xuong:"BH", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:0, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:0, bv_dg:0},
