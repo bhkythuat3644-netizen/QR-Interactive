@@ -79,3 +79,23 @@ document.addEventListener("keydown", (e) => {
         closeViewer();
     }
 });
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const viewerEl = document.getElementById('imgViewer');
+
+viewerEl.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+viewerEl.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const threshold = 50;
+    if (touchEndX < touchStartX - threshold) nextImg();
+    if (touchEndX > touchStartX + threshold) prevImg();
+}
