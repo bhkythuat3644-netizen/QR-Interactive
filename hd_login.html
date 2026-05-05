@@ -168,28 +168,33 @@ const UI = {
   fullscreen: {
 
     toggle(selector){
-      const el = document.querySelector(selector);
-      const overlay = document.getElementById("overlay");
+          const el = document.querySelector(selector);
+          const overlay = document.getElementById("overlay");
 
-      if(el.classList.contains("zoom")){
-        this.exit(selector);
-        return;
-      }
+          if(el.classList.contains("zoom")){
+            this.exit(selector);
+            return;
+          }
 
-      // ===== TÍNH SCALE THEO VIEWPORT =====
-      const rect = el.getBoundingClientRect();
+          // Xử lý riêng cho Mobile: Bỏ transform scale, set cứng width
+          if (window.innerWidth <= 768) {
+            el.classList.add("zoom");
+            el.style.width = "90%";
+            el.style.maxWidth = "400px";
+            overlay.classList.add("show");
+            return;
+          }
 
-      const scaleX = window.innerWidth / rect.width;
-      const scaleY = window.innerHeight / rect.height;
+          // ===== TÍNH SCALE THEO VIEWPORT CHO PC =====
+          const rect = el.getBoundingClientRect();
+          const scaleX = window.innerWidth / rect.width;
+          const scaleY = window.innerHeight / rect.height;
+          const scale = Math.min(scaleX, scaleY) * 0.95; 
 
-      const scale = Math.min(scaleX, scaleY) * 0.95; 
-      // 0.95 = chừa viền đẹp
-
-      el.style.setProperty("--scale", scale);
-
-      el.classList.add("zoom");
-      overlay.classList.add("show");
-    },
+          el.style.setProperty("--scale", scale);
+          el.classList.add("zoom");
+          overlay.classList.add("show");
+        },
 
     exit(selector){
       const el = document.querySelector(selector);
