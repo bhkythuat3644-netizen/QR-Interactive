@@ -342,3 +342,31 @@ tr:hover {
     color: #0068ff;
 }
 
+/* ===== ROLE BADGE ===== */
+.role-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    background: rgba(34, 211, 238, 0.28);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+    color: #e0faff;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.25);
+}
+
+.badge:hover {
+    background: rgba(34, 211, 238, 0.45);
+    color: #eaffff;
+    transform: scale(1.03);
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.4);
+}
+
