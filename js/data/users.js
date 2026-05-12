@@ -35,9 +35,9 @@ export const users = [
 {id:"003828", ten:"ĐOÀN THỊ KIM KHÁNH", mat_khau:"0000", bp:"QC", xuong:"BH", ai:0, pkl:1, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:1},
 {id:"004103", ten:"TRƯƠNG TRỌNG TUỆ", mat_khau:"0000", bp:"QC", xuong:"BH", ai:1, pkl:1, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:1},
 {id:"004074", ten:"NGUYỄN THÁI HỌC", mat_khau:"0000", bp:"QC", xuong:"BH", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
+{id:"003624", ten:"MAI XUÂN TIẾN", mat_khau:"0000", bp:"VPX", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
 {id:"003937", ten:"KHƯU THƯỢNG ĐỈNH", mat_khau:"0000", bp:"Chân giường", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:0, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:0, bv_spk:1, bv_dg:0},
 {id:"004462", ten:"KHƯU THƯƠNG ĐÔNG", mat_khau:"0000", bp:"Chân giường", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:0, bk_spk:0, bk_dg:0, bv_bed:1, bv_tu:0, bv_spk:0, bv_dg:0},
-{id:"12900390", ten:"PHẠM THÀNH HƯNG", mat_khau:"0000", bp:"QG", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0},
 {id:"004557", ten:"NGUYỄN VĂN TRUNG DŨNG", mat_khau:"0000", bp:"Giường kiếng", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:0, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:0, bv_spk:1, bv_dg:0},
 {id:"003998", ten:"NGUYỄN VĂN DƯ", mat_khau:"0000", bp:"Giường kiếng", xuong:"BH2", ai:0, pkl:0, bk_bed:0, bk_tu:0, bk_spk:0, bk_dg:0, bv_bed:1, bv_tu:0, bv_spk:1, bv_dg:0},
 {id:"004042", ten:"PHAN THANH ĐỨC", mat_khau:"0000", bp:"Ván hông mặt", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
@@ -48,9 +48,9 @@ export const users = [
 {id:"004160", ten:"LÝ MINH SANG", mat_khau:"0000", bp:"Hộc kéo", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
 {id:"004029", ten:"LÊ THÀNH TRUNG", mat_khau:"0000", bp:"Hộc kéo", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
 {id:"004021", ten:"DƯƠNG THỊ LAN", mat_khau:"0000", bp:"Cắt ván giường", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
-{id:"003618", ten:"LƯƠNG VĂN LINH", mat_khau:"0000", bp:"QC", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
-{id:"003624", ten:"MAI XUÂN TIẾN", mat_khau:"0000", bp:"VPX", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
 {id:"004085", ten:"THÁI PHI NHUNG", mat_khau:"0000", bp:"Sinh quản", xuong:"BH2", ai:0, pkl:1, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:1, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:1},
 {id:"004559", ten:"NGUYỄN THỊ MINH TÂM", mat_khau:"0000", bp:"Sinh quản", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
-{id:"004417", ten:"BÙI THỊ LOAN", mat_khau:"0000", bp:"Sinh quản", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0}
+{id:"004417", ten:"BÙI THỊ LOAN", mat_khau:"0000", bp:"Sinh quản", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
+{id:"003618", ten:"LƯƠNG VĂN LINH", mat_khau:"0000", bp:"QC", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:1, bv_tu:1, bv_spk:1, bv_dg:0},
+{id:"12900390", ten:"PHẠM THÀNH HƯNG", mat_khau:"0000", bp:"QG", xuong:"BH2", ai:0, pkl:0, bk_bed:1, bk_tu:1, bk_spk:1, bk_dg:0, bv_bed:0, bv_tu:0, bv_spk:0, bv_dg:0}
 ];
